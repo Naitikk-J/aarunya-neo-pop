@@ -1,12 +1,16 @@
 import RetroTV from './RetroTV';
 import { motion } from 'framer-motion';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onZoomComplete?: () => void;
+}
+
+const HeroSection = ({ onZoomComplete }: HeroSectionProps) => {
   return (
     <section id="home" className="relative min-h-[200vh]">
       {/* Background Gradient */}
       <div className="fixed inset-0 bg-gradient-to-b from-background via-background to-card -z-10" />
-      
+
       {/* Animated Background Circles */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-5">
         <motion.div
@@ -49,9 +53,9 @@ const HeroSection = () => {
           transition={{ duration: 7, repeat: Infinity, delay: 2 }}
         />
       </div>
-      
+
       {/* TV Section */}
-      <RetroTV />
+      <RetroTV onZoomComplete={onZoomComplete} />
       
       {/* Scroll Indicator */}
       <motion.div

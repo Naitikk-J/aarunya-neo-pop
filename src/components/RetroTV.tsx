@@ -5,11 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const RetroTV = () => {
+interface RetroTVProps {
+  onZoomComplete?: () => void;
+}
+
+const RetroTV = ({ onZoomComplete }: RetroTVProps) => {
   const tvRef = useRef<HTMLDivElement>(null);
   const screenRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isOn, setIsOn] = useState(false);
+  const hasTriggeredCallback = useRef(false);
 
   useEffect(() => {
     // Turn on animation after mount
@@ -20,18 +25,29 @@ const RetroTV = () => {
   useEffect(() => {
     if (!containerRef.current || !tvRef.current) return;
 
+    const handleZoomComplete = () => {
+      onZoomComplete?.();
+    };
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
-        end: '+=150%',
+        end: '+=100%',
         scrub: 1,
         pin: true,
+        onUpdate: (self) => {
+          // Trigger callback when scroll progress reaches near end of zoom animation
+          if (self.progress >= 0.95 && !hasTriggeredCallback.current) {
+            hasTriggeredCallback.current = true;
+            handleZoomComplete();
+          }
+        },
       },
     });
 
     tl.to(tvRef.current, {
-      scale: 15,
+      scale: 20,
       duration: 1,
       ease: 'power2.inOut',
     });
@@ -39,19 +55,19 @@ const RetroTV = () => {
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [onZoomComplete]);
 
   return (
     <div ref={containerRef} className="h-screen w-full flex items-center justify-center overflow-hidden">
       <motion.div
         ref={tvRef}
         className="relative"
-        initial={{ opacity: 0, scale: 0.5, rotateY: -30 }}
+        initial={{ opacity: 0, scale: 1, rotateY: 0 }}
         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
         {/* TV Body */}
-        <div className="relative w-[400px] md:w-[600px] aspect-[4/3]">
+        <div className="relative w-[1700px] md:w-[1500px] aspect-[16/9]">
           {/* TV Frame - Outer */}
           <div 
             className="absolute inset-0 rounded-3xl bg-gradient-to-b from-gray-600 via-gray-700 to-gray-800"
@@ -66,7 +82,7 @@ const RetroTV = () => {
           {/* Screen Container */}
           <div 
             ref={screenRef}
-            className="absolute inset-8 md:inset-10 rounded-xl overflow-hidden crt-screen"
+            className="absolute inset-8 md:inset-10 rounded-xl overflow-hidden h-[765px] w-[1420px] crt-screen"
             style={{
               background: isOn 
                 ? 'radial-gradient(ellipse at center, #1a0a2e 0%, #0a0015 100%)'
@@ -75,7 +91,7 @@ const RetroTV = () => {
           >
             {/* Screen Content */}
             <motion.div
-              className="w-full h-full flex flex-col items-center justify-center p-4"
+              className="w-full h-full flex flex-col items-center justify-center p-2 md:p-4 overflow-hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: isOn ? 1 : 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -84,17 +100,17 @@ const RetroTV = () => {
               {!isOn && (
                 <div className="absolute inset-0 bg-white animate-pulse" />
               )}
-              
+
               {/* Main Content */}
               <motion.div
-                className="text-center space-y-4"
+                className="text-center space-y-2 md:space-y-4 w-full max-w-full overflow-hidden"
                 animate={isOn ? { y: [0, -5, 0] } : {}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
-                <motion.h1 
-                  className="font-display text-2xl md:text-4xl text-primary glitch neon-pink"
+                <motion.h1
+                  className="font-display text-lg md:text-8xl text-primary glitch neon-pink leading-none"
                   data-text="AARUNYA 2.0"
-                  animate={{ 
+                  animate={{
                     textShadow: [
                       '0 0 20px hsl(300 100% 50%), 0 0 40px hsl(300 100% 50%)',
                       '0 0 40px hsl(300 100% 50%), 0 0 80px hsl(300 100% 50%)',
@@ -103,36 +119,47 @@ const RetroTV = () => {
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
+                    <br />
+                    <br />
+                    
                   AARUNYA 2.0
                 </motion.h1>
-                
-                <motion.p 
-                  className="font-display text-xs md:text-sm text-secondary neon-green"
+
+                <motion.p
+                  className="font-display text-[8px] md:text-3xl text-secondary neon-green leading-tight"
                   animate={{ opacity: [1, 0.5, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
+                    21-23  FEBRUARY  2026 <br />
+                    <br />
                   MITS GWALIOR
+                  <br />
                 </motion.p>
-                
+
                 <motion.div
-                  className="flex items-center justify-center gap-2 mt-4"
+                  className="flex items-center justify-center gap-1 md:gap-2 mt-2 md:mt-4 flex-wrap"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
                 >
-                  <span className="text-2xl">🎮</span>
-                  <span className="font-display text-xs text-accent neon-cyan">
+                    <br />
+                    <br />
+                    <div>
+                  <span className="text-lg md:text-2xl">🎮</span>
+                  <span className="font-display text-[7px] md:text-xl text-accent neon-cyan">
+                    
                     SCROLL TO ENTER
                   </span>
-                  <span className="text-2xl">🎮</span>
+                  <span className="text-lg md:text-2xl">🎮</span>
+                </div>
                 </motion.div>
-                
+
                 {/* Animated Arrows */}
                 <motion.div
-                  className="mt-4 text-neon-yellow"
+                  className="mt-2 md:mt-4 text-neon-yellow"
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 1, repeat: Infinity }}
                 >
-                  <span className="text-3xl">↓</span>
+                  <span className="text-xl md:text-3xl">↓</span>
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -171,7 +198,7 @@ const RetroTV = () => {
           {/* TV Brand Badge */}
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
             <span className="font-display text-[8px] md:text-xs text-gray-400 tracking-widest">
-              KIDCORE™
+                MITS PRESENTS
             </span>
           </div>
           
