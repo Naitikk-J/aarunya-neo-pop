@@ -70,13 +70,13 @@ const EventsSection = () => {
     <section id="events" className="relative py-20 md:py-32 px-4 md:px-8">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div 
+        <div
           className="w-full h-full"
           style={{
             backgroundImage: `
-              radial-gradient(circle at 20% 50%, hsl(300 100% 50%) 0%, transparent 25%),
-              radial-gradient(circle at 80% 50%, hsl(180 100% 50%) 0%, transparent 25%),
-              radial-gradient(circle at 50% 80%, hsl(120 100% 50%) 0%, transparent 25%)
+              radial-gradient(circle at 20% 50%, hsl(25 100% 50%) 0%, transparent 25%),
+              radial-gradient(circle at 80% 50%, hsl(210 100% 50%) 0%, transparent 25%),
+              radial-gradient(circle at 50% 80%, hsl(25 100% 50%) 0%, transparent 25%)
             `,
           }}
         />

@@ -108,11 +108,11 @@ const Index = () => {
           className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center cursor-pointer"
           style={{
             background: showDock
-              ? 'radial-gradient(circle at 30% 30%, hsl(0 100% 60%), hsl(0 100% 40%))'
-              : 'radial-gradient(circle at 30% 30%, hsl(300 100% 60%), hsl(300 100% 40%))',
+              ? 'radial-gradient(circle at 30% 30%, hsl(210 100% 60%), hsl(210 100% 40%))'
+              : 'radial-gradient(circle at 30% 30%, hsl(25 100% 60%), hsl(25 100% 40%))',
             boxShadow: showDock
-              ? '0 0 20px hsl(0 100% 50%), inset -2px -2px 5px rgba(0,0,0,0.5), inset 2px 2px 5px rgba(255,255,255,0.2)'
-              : '0 0 20px hsl(300 100% 50%), inset -2px -2px 5px rgba(0,0,0,0.5), inset 2px 2px 5px rgba(255,255,255,0.2)',
+              ? '0 0 20px hsl(210 100% 50%), inset -2px -2px 5px rgba(0,0,0,0.5), inset 2px 2px 5px rgba(255,255,255,0.2)'
+              : '0 0 20px hsl(25 100% 50%), inset -2px -2px 5px rgba(0,0,0,0.5), inset 2px 2px 5px rgba(255,255,255,0.2)',
           }}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}

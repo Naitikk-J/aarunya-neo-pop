@@ -16,7 +16,7 @@ const HeroSection = ({ onZoomComplete }: HeroSectionProps) => {
         <motion.div
           className="absolute w-96 h-96 rounded-full opacity-20"
           style={{
-            background: 'radial-gradient(circle, hsl(300 100% 50%) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(25 100% 50%) 0%, transparent 70%)',
             top: '10%',
             left: '10%',
           }}
@@ -29,7 +29,7 @@ const HeroSection = ({ onZoomComplete }: HeroSectionProps) => {
         <motion.div
           className="absolute w-80 h-80 rounded-full opacity-20"
           style={{
-            background: 'radial-gradient(circle, hsl(180 100% 50%) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(210 100% 50%) 0%, transparent 70%)',
             top: '40%',
             right: '15%',
           }}
@@ -42,7 +42,7 @@ const HeroSection = ({ onZoomComplete }: HeroSectionProps) => {
         <motion.div
           className="absolute w-72 h-72 rounded-full opacity-20"
           style={{
-            background: 'radial-gradient(circle, hsl(120 100% 50%) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, hsl(25 100% 50%) 0%, transparent 70%)',
             bottom: '20%',
             left: '20%',
           }}

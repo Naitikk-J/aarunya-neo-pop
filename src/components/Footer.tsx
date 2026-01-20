@@ -17,8 +17,8 @@ const Footer = () => {
           style={{
             backgroundImage: `repeating-linear-gradient(
               45deg,
-              hsl(300 100% 50%) 0px,
-              hsl(300 100% 50%) 2px,
+              hsl(25 100% 50%) 0px,
+              hsl(25 100% 50%) 2px,
               transparent 2px,
               transparent 10px
             )`,
@@ -70,9 +70,9 @@ const Footer = () => {
                   href={social.url}
                   className="w-12 h-12 bg-card border-2 border-muted flex items-center justify-center text-xl interactive"
                   style={{ boxShadow: '3px 3px 0px rgba(0,0,0,0.5)' }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.1,
-                    borderColor: 'hsl(300 100% 50%)',
+                    borderColor: 'hsl(25 100% 50%)',
                   }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, px } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -112,13 +112,14 @@ const RetroTV = ({ onZoomComplete }: RetroTVProps) => {
                   data-text="AARUNYA 2.0"
                   animate={{
                     textShadow: [
-                      '0 0 20px hsl(300 100% 50%), 0 0 40px hsl(300 100% 50%)',
-                      '0 0 40px hsl(300 100% 50%), 0 0 80px hsl(300 100% 50%)',
-                      '0 0 20px hsl(300 100% 50%), 0 0 40px hsl(300 100% 50%)',
+                      '0 0 20px hsl(25 100% 50%), 0 0 40px hsl(25 100% 50%)',
+                      '0 0 40px hsl(25 100% 50%), 0 0 80px hsl(25 100% 50%)',
+                      '0 0 20px hsl(25 100% 50%), 0 0 40px hsl(25 100% 50%)',
                     ]
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
+                  <img src="./public/img1.png" alt="Aarunya Logo" width={300}  />
                     <br />
                     <br />
                     
