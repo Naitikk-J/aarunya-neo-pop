@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Calendar, Image, Users, Heart, LogIn } from 'lucide-react';
+import { Home, Calendar, Image, Users, Heart, LogIn, UserPlus } from 'lucide-react';
 
 const navItems = [
   { icon: Home, label: 'Home', href: '/' },
@@ -9,7 +9,8 @@ const navItems = [
   { icon: Image, label: 'Gallery', href: './Gallery' },
   { icon: Heart, label: 'Sponsors', href: '#sponsors' },
   { icon: Users, label: 'Team', href: '#team' },
-  { icon: LogIn, label: 'Login', href: '#login' },
+  { icon: UserPlus, label: 'Register', href: '/register' },
+  { icon: LogIn, label: 'Login', href: '/login' },
 ];
 
 interface DockNavbarProps {
