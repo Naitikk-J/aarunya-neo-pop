@@ -121,7 +121,6 @@ const RetroTV = ({ onZoomComplete }: RetroTVProps) => {
                 >
                   <img src="./public/img1.png" alt="Aarunya Logo" width={300}  />
                     <br />
-                    <br />
                     
                   AARUNYA 2.0
                 </motion.h1>
@@ -156,7 +155,7 @@ const RetroTV = ({ onZoomComplete }: RetroTVProps) => {
 
                 {/* Animated Arrows */}
                 <motion.div
-                  className="mt-2 md:mt-4 text-neon-yellow"
+                  className="mt-2 md:mt-4 text-carnival-golden"
                   animate={{ y: [0, 10, 0] }}
                   transition={{ duration: 1, repeat: Infinity }}
                 >

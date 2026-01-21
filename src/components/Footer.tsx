@@ -12,13 +12,13 @@ const Footer = () => {
     <footer className="relative py-12 px-4 md:px-8 border-t-4 border-primary">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div 
+        <div
           className="w-full h-full"
           style={{
             backgroundImage: `repeating-linear-gradient(
               45deg,
-              hsl(25 100% 50%) 0px,
-              hsl(25 100% 50%) 2px,
+              hsl(28 100% 50%) 0px,
+              hsl(28 100% 50%) 2px,
               transparent 2px,
               transparent 10px
             )`,
@@ -30,8 +30,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <motion.h3 
-              className="font-display text-xl text-primary mb-4 neon-pink"
+            <motion.h3
+              className="font-display text-xl text-primary mb-4"
+              style={{ textShadow: '0 0 15px hsl(28 100% 50%), 0 0 30px hsl(28 100% 50%)' }}
               whileHover={{ scale: 1.05 }}
             >
               AARUNYA 2.0
@@ -68,11 +69,11 @@ const Footer = () => {
                 <motion.a
                   key={social.name}
                   href={social.url}
-                  className="w-12 h-12 bg-card border-2 border-muted flex items-center justify-center text-xl interactive"
-                  style={{ boxShadow: '3px 3px 0px rgba(0,0,0,0.5)' }}
+                  className="w-12 h-12 bg-card border-2 border-muted flex items-center justify-center text-xl interactive rounded"
+                  style={{ boxShadow: '3px 3px 0px hsl(217 33% 15%)' }}
                   whileHover={{
                     scale: 1.1,
-                    borderColor: 'hsl(25 100% 50%)',
+                    borderColor: 'hsl(28 100% 50%)',
                   }}
                   whileTap={{ scale: 0.95 }}
                 >

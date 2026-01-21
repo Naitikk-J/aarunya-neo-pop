@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
 
 const stickers = [
-  { emoji: '⭐', color: 'text-neon-yellow', size: 'text-4xl', delay: 0 },
-  { emoji: '⚡', color: 'text-neon-orange', size: 'text-3xl', delay: 0.5 },
+  { emoji: '⭐', color: 'text-carnival-golden', size: 'text-4xl', delay: 0 },
+  { emoji: '⚡', color: 'text-carnival-orange', size: 'text-3xl', delay: 0.5 },
   { emoji: '🌈', color: '', size: 'text-4xl', delay: 1 },
-  { emoji: '💖', color: 'text-neon-pink', size: 'text-3xl', delay: 1.5 },
+  { emoji: '💖', color: 'text-carnival-coral', size: 'text-3xl', delay: 1.5 },
   { emoji: '🎮', color: '', size: 'text-4xl', delay: 0.3 },
   { emoji: '🎪', color: '', size: 'text-3xl', delay: 0.8 },
-  { emoji: '🌟', color: 'text-neon-yellow', size: 'text-5xl', delay: 1.2 },
+  { emoji: '🌟', color: 'text-carnival-golden', size: 'text-5xl', delay: 1.2 },
   { emoji: '🎵', color: '', size: 'text-3xl', delay: 0.6 },
   { emoji: '🔥', color: '', size: 'text-4xl', delay: 1.8 },
-  { emoji: '💫', color: 'text-neon-cyan', size: 'text-3xl', delay: 0.2 },
+  { emoji: '💫', color: 'text-carnival-teal', size: 'text-3xl', delay: 0.2 },
 ];
 
 const positions = [

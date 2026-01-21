@@ -61,24 +61,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Kidcore specific colors
-        neon: {
-          pink: "hsl(var(--neon-pink))",
-          green: "hsl(var(--slime-green))",
-          cyan: "hsl(var(--electric-cyan))",
-          orange: "hsl(var(--hot-orange))",
-          yellow: "hsl(var(--electric-yellow))",
-          purple: "hsl(var(--deep-purple))",
-        },
-        candy: {
-          bubblegum: "hsl(var(--bubblegum))",
-          red: "hsl(var(--candy-red))",
+        // Retro Carnival colors
+        carnival: {
+          golden: "hsl(var(--golden-yellow))",
+          navy: "hsl(var(--deep-navy))",
+          orange: "hsl(var(--warm-orange))",
+          teal: "hsl(var(--soft-teal))",
+          coral: "hsl(var(--sunset-coral))",
+          purple: "hsl(var(--dream-purple))",
+          cream: "hsl(var(--cream-white))",
+          charcoal: "hsl(var(--charcoal-dark))",
         },
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
       },
       keyframes: {
         "accordion-down": {
@@ -134,11 +132,11 @@ export default {
         "color-shift": "color-shift 10s linear infinite",
       },
       boxShadow: {
-        "retro": "4px 4px 0px hsl(0 0% 0%)",
-        "retro-lg": "8px 8px 0px hsl(0 0% 0%)",
-        "neon-pink": "0 0 20px hsl(300 100% 50% / 0.5), 0 0 40px hsl(300 100% 50% / 0.3)",
-        "neon-green": "0 0 20px hsl(120 100% 50% / 0.5), 0 0 40px hsl(120 100% 50% / 0.3)",
-        "neon-cyan": "0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3)",
+        "retro": "6px 6px 0px hsl(217 33% 15%)",
+        "retro-lg": "12px 12px 0px hsl(217 33% 15%)",
+        "carnival-gold": "0 0 30px hsl(42 100% 55% / 0.6), 0 0 60px hsl(42 100% 55% / 0.3)",
+        "carnival-orange": "0 0 30px hsl(28 100% 50% / 0.6), 0 0 60px hsl(28 100% 50% / 0.3)",
+        "carnival-teal": "0 0 30px hsl(180 40% 50% / 0.5), 0 0 60px hsl(180 40% 50% / 0.3)",
       },
     },
   },

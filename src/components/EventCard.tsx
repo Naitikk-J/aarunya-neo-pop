@@ -9,40 +9,34 @@ interface EventCardProps {
   venue: string;
   teamSize: string;
   image: string;
-  color: 'pink' | 'green' | 'cyan' | 'yellow' | 'orange';
+  color: 'orange' | 'golden' | 'teal' | 'coral';
   index: number;
 }
 
 const colorClasses = {
-  pink: {
+  orange: {
     bg: 'bg-primary',
     border: 'border-primary',
-    shadow: 'shadow-neon-pink',
+    shadow: 'shadow-carnival-orange',
     glow: 'box-neon-pink',
   },
-  green: {
+  golden: {
     bg: 'bg-secondary',
     border: 'border-secondary',
-    shadow: 'shadow-neon-green',
-    glow: 'box-neon-green',
+    shadow: 'shadow-carnival-gold',
+    glow: 'box-neon-pink',
   },
-  cyan: {
+  teal: {
     bg: 'bg-accent',
     border: 'border-accent',
-    shadow: 'shadow-neon-cyan',
+    shadow: 'shadow-carnival-teal',
     glow: 'box-neon-cyan',
   },
-  yellow: {
-    bg: 'bg-neon-yellow',
-    border: 'border-neon-yellow',
-    shadow: '',
-    glow: '',
-  },
-  orange: {
-    bg: 'bg-neon-orange',
-    border: 'border-neon-orange',
-    shadow: '',
-    glow: '',
+  coral: {
+    bg: 'bg-carnival-coral',
+    border: 'border-carnival-coral',
+    shadow: 'shadow-carnival-orange',
+    glow: 'box-neon-pink',
   },
 };
 
@@ -160,12 +154,12 @@ const EventCard = ({ title, category, date, time, venue, teamSize, image, color,
             
             {/* Register Button */}
             <motion.button
-              className={`w-full py-3 ${colors.bg} font-display text-xs text-background border-4 border-black interactive`}
-              style={{ boxShadow: '4px 4px 0px rgba(0,0,0,1)' }}
+              className={`w-full py-3 ${colors.bg} font-display text-xs text-background border-4 interactive rounded`}
+              style={{ borderColor: 'hsl(217 33% 15%)', boxShadow: '4px 4px 0px hsl(217 33% 15%)' }}
               whileHover={{ scale: 1.02 }}
-              whileTap={{ 
+              whileTap={{
                 scale: 0.98,
-                boxShadow: '2px 2px 0px rgba(0,0,0,1)',
+                boxShadow: '2px 2px 0px hsl(217 33% 15%)',
                 x: 2,
                 y: 2,
               }}

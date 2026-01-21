@@ -28,8 +28,8 @@ const AboutSection = () => {
       />
       
       <div className="container mx-auto relative z-10">
-        <SectionTitle 
-          color="cyan"
+        <SectionTitle
+          color="teal"
           subtitle="The biggest college fest of Central India is back!"
         >
           WELCOME TO AARUNYA
@@ -57,10 +57,10 @@ const AboutSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <CandyButton variant="pink" size="lg">
+              <CandyButton variant="orange" size="lg">
                 REGISTER NOW
               </CandyButton>
-              <CandyButton variant="cyan" size="lg">
+              <CandyButton variant="teal" size="lg">
                 WATCH TEASER
               </CandyButton>
             </div>
@@ -83,9 +83,9 @@ const AboutSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  borderColor: index % 2 === 0 ? 'hsl(300 100% 50%)' : 'hsl(180 100% 50%)',
+                  borderColor: index % 2 === 0 ? 'hsl(28 100% 50%)' : 'hsl(180 40% 50%)',
                 }}
               >
                 <motion.span 

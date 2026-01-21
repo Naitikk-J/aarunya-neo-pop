@@ -72,14 +72,14 @@ const CursorFollower = () => {
               transition={{ duration: 0.3, repeat: isHovering ? Infinity : 0 }}
             />
             {/* Corner Accents */}
-            <div className="absolute top-0 left-0 w-2 h-0.5 bg-neon-pink" />
-            <div className="absolute top-0 left-0 w-0.5 h-2 bg-neon-pink" />
-            <div className="absolute top-0 right-0 w-2 h-0.5 bg-neon-cyan" />
-            <div className="absolute top-0 right-0 w-0.5 h-2 bg-neon-cyan" />
-            <div className="absolute bottom-0 left-0 w-2 h-0.5 bg-neon-green" />
-            <div className="absolute bottom-0 left-0 w-0.5 h-2 bg-neon-green" />
-            <div className="absolute bottom-0 right-0 w-2 h-0.5 bg-neon-yellow" />
-            <div className="absolute bottom-0 right-0 w-0.5 h-2 bg-neon-yellow" />
+            <div className="absolute top-0 left-0 w-2 h-0.5 bg-carnival-orange" />
+            <div className="absolute top-0 left-0 w-0.5 h-2 bg-carnival-orange" />
+            <div className="absolute top-0 right-0 w-2 h-0.5 bg-carnival-teal" />
+            <div className="absolute top-0 right-0 w-0.5 h-2 bg-carnival-teal" />
+            <div className="absolute bottom-0 left-0 w-2 h-0.5 bg-carnival-golden" />
+            <div className="absolute bottom-0 left-0 w-0.5 h-2 bg-carnival-golden" />
+            <div className="absolute bottom-0 right-0 w-2 h-0.5 bg-carnival-coral" />
+            <div className="absolute bottom-0 right-0 w-0.5 h-2 bg-carnival-coral" />
           </div>
         </motion.div>
       </motion.div>
@@ -95,7 +95,7 @@ const CursorFollower = () => {
         <motion.div
           className="w-8 h-8 rounded-full opacity-30"
           style={{
-            background: 'linear-gradient(135deg, hsl(300 100% 50%), hsl(180 100% 50%))',
+            background: 'linear-gradient(135deg, hsl(28 100% 50%), hsl(180 40% 50%))',
             filter: 'blur(8px)',
           }}
           animate={{

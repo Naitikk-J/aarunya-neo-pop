@@ -13,8 +13,8 @@ const sponsors = [
 ];
 
 const tierStyles = {
-  platinum: 'border-neon-yellow bg-gradient-to-br from-yellow-900/20 to-yellow-800/10',
-  gold: 'border-neon-orange bg-gradient-to-br from-orange-900/20 to-orange-800/10',
+  platinum: 'border-carnival-golden bg-gradient-to-br from-yellow-900/20 to-yellow-800/10',
+  gold: 'border-carnival-orange bg-gradient-to-br from-orange-900/20 to-orange-800/10',
   silver: 'border-muted-foreground bg-gradient-to-br from-gray-800/20 to-gray-700/10',
 };
 
@@ -22,8 +22,8 @@ const SponsorsSection = () => {
   return (
     <section id="sponsors" className="relative py-20 md:py-32 px-4 md:px-8">
       <div className="container mx-auto">
-        <SectionTitle 
-          color="pink"
+        <SectionTitle
+          color="orange"
           subtitle="The amazing brands making this fest possible!"
         >
           OUR SPONSORS
@@ -31,8 +31,9 @@ const SponsorsSection = () => {
         
         {/* Platinum Tier */}
         <div className="mb-12">
-          <motion.h3 
-            className="font-display text-sm text-neon-yellow text-center mb-6 neon-yellow"
+          <motion.h3
+            className="font-display text-sm text-carnival-golden text-center mb-6"
+            style={{ textShadow: '0 0 15px hsl(42 100% 55%), 0 0 30px hsl(42 100% 55%)' }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -60,8 +61,9 @@ const SponsorsSection = () => {
         
         {/* Gold Tier */}
         <div className="mb-12">
-          <motion.h3 
-            className="font-display text-sm text-neon-orange text-center mb-6"
+          <motion.h3
+            className="font-display text-sm text-carnival-orange text-center mb-6"
+            style={{ textShadow: '0 0 15px hsl(28 100% 50%), 0 0 30px hsl(28 100% 50%)' }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -127,10 +129,10 @@ const SponsorsSection = () => {
             Want to be a part of something amazing?
           </p>
           <motion.button
-            className="font-display text-sm px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-background border-4 border-black interactive"
-            style={{ boxShadow: '4px 4px 0px rgba(0,0,0,1)' }}
+            className="font-display text-sm px-8 py-4 bg-gradient-to-r from-primary via-accent to-secondary text-background border-4 interactive rounded"
+            style={{ borderColor: 'hsl(217 33% 15%)', boxShadow: '4px 4px 0px hsl(217 33% 15%)' }}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95, x: 4, y: 4, boxShadow: '0px 0px 0px rgba(0,0,0,1)' }}
+            whileTap={{ scale: 0.95, x: 4, y: 4, boxShadow: '0px 0px 0px hsl(217 33% 15%)' }}
           >
             BECOME A SPONSOR
           </motion.button>

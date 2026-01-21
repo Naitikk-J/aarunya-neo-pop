@@ -3,18 +3,17 @@ import { ReactNode } from 'react';
 
 interface CandyButtonProps {
   children: ReactNode;
-  variant?: 'pink' | 'green' | 'cyan' | 'yellow' | 'orange';
+  variant?: 'orange' | 'golden' | 'teal' | 'coral';
   size?: 'sm' | 'md' | 'lg';
   onClick?: () => void;
   className?: string;
 }
 
 const variants = {
-  pink: 'bg-primary text-primary-foreground border-primary',
-  green: 'bg-secondary text-secondary-foreground border-secondary',
-  cyan: 'bg-accent text-accent-foreground border-accent',
-  yellow: 'bg-neon-yellow text-background border-neon-yellow',
-  orange: 'bg-neon-orange text-background border-neon-orange',
+  orange: 'bg-primary text-primary-foreground border-primary',
+  golden: 'bg-secondary text-secondary-foreground border-secondary',
+  teal: 'bg-accent text-accent-foreground border-accent',
+  coral: 'bg-carnival-coral text-background border-carnival-coral',
 };
 
 const sizes = {
@@ -23,9 +22,9 @@ const sizes = {
   lg: 'px-8 py-4 text-sm',
 };
 
-const CandyButton = ({ 
-  children, 
-  variant = 'pink', 
+const CandyButton = ({
+  children,
+  variant = 'orange',
   size = 'md',
   onClick,
   className = '',
@@ -34,23 +33,24 @@ const CandyButton = ({
     <motion.button
       className={`
         relative font-display uppercase tracking-wider
-        border-4 border-black
+        border-4 rounded-lg
         ${variants[variant]}
         ${sizes[size]}
         ${className}
         interactive
       `}
       style={{
-        boxShadow: '4px 4px 0px hsl(0 0% 0%)',
+        borderColor: 'hsl(217 33% 15%)',
+        boxShadow: '6px 6px 0px hsl(217 33% 15%)',
       }}
       whileHover={{
         scale: 1.05,
       }}
       whileTap={{
         scale: 0.98,
-        x: 4,
-        y: 4,
-        boxShadow: '0px 0px 0px hsl(0 0% 0%)',
+        x: 6,
+        y: 6,
+        boxShadow: '0px 0px 0px hsl(217 33% 15%)',
       }}
       onClick={onClick}
     >

@@ -4,13 +4,13 @@ import { ReactNode } from 'react';
 interface SectionTitleProps {
   children: ReactNode;
   subtitle?: string;
-  color?: 'pink' | 'green' | 'cyan' | 'rainbow';
+  color?: 'orange' | 'teal' | 'golden' | 'rainbow';
 }
 
 const glowColors = {
-  pink: 'neon-pink',
-  green: 'neon-green',
-  cyan: 'neon-cyan',
+  orange: 'neon-pink',
+  teal: 'neon-cyan',
+  golden: 'neon-yellow',
   rainbow: 'rainbow-text',
 };
 

@@ -11,7 +11,7 @@ const events = [
     venue: 'Main Auditorium',
     teamSize: '1-3 Members',
     image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop&q=80',
-    color: 'pink' as const,
+    color: 'orange' as const,
   },
   {
     title: 'DANCE BATTLE',
@@ -21,7 +21,7 @@ const events = [
     venue: 'Open Air Theater',
     teamSize: '4-8 Members',
     image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600&h=400&fit=crop&q=80',
-    color: 'green' as const,
+    color: 'golden' as const,
   },
   {
     title: 'ROBO WARS',
@@ -31,7 +31,7 @@ const events = [
     venue: 'Tech Arena',
     teamSize: '2-4 Members',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop&q=80',
-    color: 'cyan' as const,
+    color: 'teal' as const,
   },
   {
     title: 'BATTLE OF BANDS',
@@ -41,7 +41,7 @@ const events = [
     venue: 'Main Stage',
     teamSize: '4-6 Members',
     image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop&q=80',
-    color: 'yellow' as const,
+    color: 'coral' as const,
   },
   {
     title: 'GAMING ARENA',
@@ -61,7 +61,7 @@ const events = [
     venue: 'Art Gallery',
     teamSize: 'Individual',
     image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=400&fit=crop&q=80',
-    color: 'pink' as const,
+    color: 'golden' as const,
   },
 ];
 
@@ -74,9 +74,9 @@ const EventsSection = () => {
           className="w-full h-full"
           style={{
             backgroundImage: `
-              radial-gradient(circle at 20% 50%, hsl(25 100% 50%) 0%, transparent 25%),
-              radial-gradient(circle at 80% 50%, hsl(210 100% 50%) 0%, transparent 25%),
-              radial-gradient(circle at 50% 80%, hsl(25 100% 50%) 0%, transparent 25%)
+              radial-gradient(circle at 20% 50%, hsl(28 100% 50%) 0%, transparent 25%),
+              radial-gradient(circle at 80% 50%, hsl(180 40% 50%) 0%, transparent 25%),
+              radial-gradient(circle at 50% 80%, hsl(42 100% 55%) 0%, transparent 25%)
             `,
           }}
         />
